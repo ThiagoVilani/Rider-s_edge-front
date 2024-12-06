@@ -1,0 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SUSE', sans-serif;
+
+}
+
+/* Footer */
+footer div {
+    color: #888888;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
