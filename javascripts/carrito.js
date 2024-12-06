@@ -148,7 +148,7 @@ async function finalizarCompra() {
 
     try {
         // Envío de datos al servidor
-        const response = await fetch('http://localhost:3000/ticket/finalizar-compra', {
+        const response = await fetch('https://rider-s-edge-back.onrender.com/ticket/finalizar-compra', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 

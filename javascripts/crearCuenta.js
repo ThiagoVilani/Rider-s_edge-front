@@ -22,7 +22,7 @@ async function crear() {
 
     try {
         // Enviar datos al servidor
-        const response = await fetch('http://localhost:3000/usuario/crearUsuario', {
+        const response = await fetch('https://rider-s-edge-back.onrender.com/usuario/crearUsuario', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 

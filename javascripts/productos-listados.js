@@ -51,7 +51,7 @@ async function SetIndice(direccion){
 async function ObtenerProductoEspecifico(producto){
     try{
         const indice = localStorage.getItem("indice");
-        const response = await fetch(`http://localhost:3000/productos/${producto}?indice=${indice}`);
+        const response = await fetch(`https://rider-s-edge-back.onrender.com/productos/${producto}?indice=${indice}`);
         if(response.status === 500){
             Swal.fire("Error al conectarse con el servidor");
         }
@@ -70,7 +70,7 @@ async function ObtenerProductos(direccion=0){
     try{
         const indice = localStorage.getItem("indice");
         const vista = localStorage.getItem("vista");
-        const response = await fetch(`http://localhost:3000/productos/${vista}?indice=${indice}&direccion=${direccion}`);
+        const response = await fetch(`https://rider-s-edge-back.onrender.com/productos/${vista}?indice=${indice}&direccion=${direccion}`);
         if(response.status === 500){
             Swal.fire("Error al conectarse con el servidor");
         }

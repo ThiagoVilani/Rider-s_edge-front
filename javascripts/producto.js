@@ -22,7 +22,7 @@ export default class Producto{
 
     static async TraerProductos(){
         try{
-            const response = await fetch("http://localhost:3000/productos");
+            const response = await fetch("https://rider-s-edge-back.onrender.com/productos");
             console.log(response);
             const jsonString = await response.text();
             return JSON.parse(jsonString);

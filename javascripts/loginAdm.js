@@ -32,7 +32,7 @@ async function ingresar() {
     }
 
         // envío de datos al servidor
-        const response = await fetch('http://localhost:3000/usuario/login', {
+        const response = await fetch('https://rider-s-edge-back.onrender.com/usuario/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 

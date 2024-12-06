@@ -71,7 +71,7 @@ async function CrearBotones(){
 async function ObtenerProductos(direccion = 0){
     try{
         const indice = localStorage.getItem("indice");
-        const response = await fetch(`http://localhost:3000/admin/productos?indice=${indice}&direccion=${direccion}`);
+        const response = await fetch(`https://rider-s-edge-back.onrender.com/admin/productos?indice=${indice}&direccion=${direccion}`);
         if(response.status === 500){
             Swal.fire("Error al conectarse con el servidor");
         }
@@ -104,7 +104,7 @@ function cerrarFormulario() {
 
 
 async function InsertarFormNuevoProducto(){
-    const response = await fetch("http://localhost:3000/admin/form-producto");
+    const response = await fetch("https://rider-s-edge-back.onrender.com/admin/form-producto");
     const form = await response.text();
     document.getElementById("accion").style.visibility = "visible";
     document.getElementById("accion").innerHTML = form;
@@ -148,7 +148,7 @@ async function InsertarImagen(){
         const formData = new FormData();
         const imagen = document.getElementById("input-agregar-imagenes").files[0];
         formData.append("imagen",imagen); 
-        const resultado = await fetch("http://localhost:3000/admin/carga",{
+        const resultado = await fetch("https://rider-s-edge-back.onrender.com/admin/carga",{
             method:"POST",
             body:formData
         });
@@ -160,7 +160,7 @@ async function InsertarImagen(){
 }
 
 async function InsertarFormModProducto(idProducto){
-    const response = await fetch("http://localhost:3000/admin/modificar-producto",{
+    const response = await fetch("https://rider-s-edge-back.onrender.com/admin/modificar-producto",{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -208,7 +208,7 @@ async function EscuhcarBtnFormMod(event, id) {
 
  
 async function EnviarProductoActualizado(producto){
-    const response = await fetch("http://localhost:3000/admin/modificar",{
+    const response = await fetch("https://rider-s-edge-back.onrender.com/admin/modificar",{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -264,7 +264,7 @@ async function ActualizarProducto(event,id){
 }
 
 async function InsertarNuevoProducto(producto){
-    const response = await fetch("http://localhost:3000/admin/nuevo-producto",{
+    const response = await fetch("https://rider-s-edge-back.onrender.com/admin/nuevo-producto",{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -316,7 +316,7 @@ function EscucharBtnModProducto(){
 
 
 async function EscucharBtnEstado(producto){
-    const resultado = await fetch("http://localhost:3000/admin/cambiar-estado",{
+    const resultado = await fetch("https://rider-s-edge-back.onrender.com/admin/cambiar-estado",{
         method:"POST",
         headers: {
             'Content-Type': 'application/json',
@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 async function descargarExcel() {
     try {
-        const response = await fetch('http://localhost:3000/admin/excel', {
+        const response = await fetch('https://rider-s-edge-back.onrender.com/admin/excel', {
             method: 'GET'
         });
 
