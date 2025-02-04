@@ -1,5 +1,7 @@
-let modeToggler = document.getElementById("mode-toggler");
-let html = document.getElementsByTagName("html")[0];
+document.addEventListener("DOMContentLoaded", function () {
+  let modeToggler = document.getElementById("mode-toggler");
+  let html = document.getElementsByTagName("html")[0];
+});
 
 // OBTENEMOS LAS HOJAS DE ESTILO DINÁMICAMENTE
 let hojasEstiloClaras = document.querySelectorAll("link[href*='stylesheets/']");
