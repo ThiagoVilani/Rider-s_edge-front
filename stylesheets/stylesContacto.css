@@ -5,7 +5,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-image: url("/back/public/images/fondoCrear.jpg");
+    background-image: url("https://rider-s-edge-back.onrender.com/images/fondoCrear.jpg");
     background-size: auto;  
     background-position: center;  
     background-repeat: no-repeat;  

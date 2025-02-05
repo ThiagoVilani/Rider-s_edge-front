@@ -13,7 +13,7 @@
 } 
 
 body{
-    background-image: url('/back/public/images/fondoAdmin.jpg');
+    background-image: url('https://rider-s-edge-back.onrender.com/images/fondoAdmin.jpg');
     background-size: cover;  
     background-position: center;  
     background-repeat: no-repeat;  

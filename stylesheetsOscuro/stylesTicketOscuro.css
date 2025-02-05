@@ -3,7 +3,7 @@ html, body {
 }
 
 body{
-  background-image: url("/back/public/images/fondoCrearOscuro.jpg");
+  background-image: url("https://rider-s-edge-back.onrender.com/images/fondoCrearOscuro.jpg");
 background-size:auto;  
 background-position: center;  
 background-repeat: repeat;  
@@ -105,7 +105,7 @@ padding-bottom: 50%;
 }
 
 body {
-  background-image: url("/back/public/images/fondoCrearOscuro.jpg");
+  background-image: url("https://rider-s-edge-back.onrender.com/images/fondoCrearOscuro.jpg");
   background-size:auto;  
   background-position: center;  
   background-repeat: repeat;  
