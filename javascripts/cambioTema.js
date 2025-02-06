@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   SetTheme();
-  EscucharModeToggler(modeToggler);
+  EscucharModeToggler();
 });
 
 // OBTENEMOS LAS HOJAS DE ESTILO DINÁMICAMENTE
