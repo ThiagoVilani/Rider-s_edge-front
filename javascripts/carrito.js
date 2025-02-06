@@ -23,7 +23,7 @@ function cargarProductosCarrito() {
         productRow.classList.add('cart-item', 'd-flex', 'justify-content-between', 'align-items-center', 'mb-3');
 
         productRow.innerHTML = `
-            <img src="https://rider-s-edge-back.onrender.com/productos/${producto.img}" alt="${producto.nombre}" class="img-fluid" style="width: 50px; height: 50px; margin-right: 10px;">
+            <img src="${producto.img}" alt="${producto.nombre}" class="img-fluid" style="width: 50px; height: 50px; margin-right: 10px;">
             <span>${producto.marca} ${producto.modelo}</span>
             <span>$${producto.precio.toFixed(2)}</span>
             <div class="d-flex align-items-center">
