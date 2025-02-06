@@ -6,7 +6,8 @@ document.getElementsByClassName("logo-nav")[0].addEventListener("click",()=>{
 
 // muestra el nombre de usuario almacenado, si existe
 const username = localStorage.getItem('username');
-
-if (username) {
-    document.getElementById('bienvenida-usuario').textContent = `Bienvenido/a, ${username}`;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    if (username) {
+        document.getElementById('bienvenida-usuario').textContent = `Bienvenido/a, ${username}`;
+    }
+});
