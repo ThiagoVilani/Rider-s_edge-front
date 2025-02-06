@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let modeToggler = document.getElementById("mode-toggler");
   SetTheme();
   EscucharModeToggler(modeToggler);
 });
@@ -17,28 +16,30 @@ function SetTheme(){
     switch (theme) {
       case "dark":
         html.setAttribute("data-bs-theme", "dark");
-  
+        
         hojasEstiloClaras.forEach((hoja) => (hoja.disabled = true));
         hojasEstiloOscuras.forEach((hoja) => (hoja.disabled = false));
         break;
       case "light":
         html.setAttribute("data-bs-theme", "light");
-  
+        
         hojasEstiloClaras.forEach((hoja) => (hoja.disabled = false));
         hojasEstiloOscuras.forEach((hoja) => (hoja.disabled = true));
         break;
-      default:
-  
-        html.setAttribute("data-bs-theme", "light");
-  
-        hojasEstiloClaras.forEach((hoja) => (hoja.disabled = false));
-        hojasEstiloOscuras.forEach((hoja) => (hoja.disabled = true));
-        break;
-    }
+        default:
+          
+          html.setAttribute("data-bs-theme", "light");
+          
+          hojasEstiloClaras.forEach((hoja) => (hoja.disabled = false));
+          hojasEstiloOscuras.forEach((hoja) => (hoja.disabled = true));
+          break;
+        }
   };
 }
 
-function EscucharModeToggler(modeToggler){
+function EscucharModeToggler(){
+  let modeToggler = document.getElementById("mode-toggler");
+  let html = document.getElementsByTagName("html")[0];
   modeToggler.addEventListener("click", () => {
     if (html.getAttribute("data-bs-theme") == "light") {
       html.setAttribute("data-bs-theme", "dark");
