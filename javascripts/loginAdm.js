@@ -12,9 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function autocompletar() {
-    document.getElementById('email').value = "vero@gmail.com";
-    document.getElementById('password').value= "Vero12345";
-
+    document.getElementById('email').value = "email@email.com";
+    document.getElementById('password').value= "Password1234";
 }
 
 async function ingresar() {
