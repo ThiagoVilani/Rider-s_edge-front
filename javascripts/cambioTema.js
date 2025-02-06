@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let modeToggler = document.getElementById("mode-toggler");
-  let html = document.getElementsByTagName("html")[0];
-  SetTheme(html);
+  SetTheme();
   EscucharModeToggler(modeToggler);
 });
 
@@ -10,10 +9,11 @@ let hojasEstiloClaras = document.querySelectorAll("link[href*='stylesheets/']");
 let hojasEstiloOscuras = document.querySelectorAll("link[href*='stylesheetsOscuro/']");
 
 
-function SetTheme(html){
+function SetTheme(){
   window.onload = () => {
     const theme = localStorage.getItem("theme");
-  
+    let html = document.getElementsByTagName("html")[0];
+    
     switch (theme) {
       case "dark":
         html.setAttribute("data-bs-theme", "dark");
