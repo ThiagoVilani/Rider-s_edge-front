@@ -119,6 +119,7 @@ async function EscucharBtnFormNuevo(event){
     if(resultado){
         try{
             const {ruta} = await resultado.json();
+            console.log(ruta);
             const producto = {
                 marca: event.target.marca.value,
                 modelo: event.target.modelo.value,
