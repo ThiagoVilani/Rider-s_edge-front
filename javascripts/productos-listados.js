@@ -13,11 +13,13 @@ ObtenerProductos();
 
 document.addEventListener("DOMContentLoaded",()=>{
     document.getElementsByClassName("btn-opcion-nav")[0].addEventListener("click",function(){
+        console.log("Boton camperas");
         localStorage.setItem("vista","cascos");
         ObtenerProductoEspecifico("cascos");
         
     });
     document.getElementsByClassName("btn-opcion-nav")[1].addEventListener("click",function(){
+        console.log("Boton camperas");
         localStorage.setItem("vista","camperas");
         ObtenerProductoEspecifico("camperas");
     });
@@ -115,6 +117,8 @@ function EscucharBtnAgregarCarrito(){
         
                 localStorage.setItem("carrito", JSON.stringify(carrito));
                 Swal.fire("Producto agregado al carrito");
+            }else{
+                Swal.fire("El producto ya se encuentra en el carrito");
             } 
         });
     }
