@@ -13,10 +13,9 @@ ObtenerProductos();
 
 document.addEventListener("DOMContentLoaded",()=>{
     document.getElementsByClassName("btn-opcion-nav")[0].addEventListener("click",function(){
-        console.log("Boton camperas");
+        console.log("Boton cascos");
         localStorage.setItem("vista","cascos");
         ObtenerProductoEspecifico("cascos");
-        
     });
     document.getElementsByClassName("btn-opcion-nav")[1].addEventListener("click",function(){
         console.log("Boton camperas");
@@ -58,7 +57,9 @@ async function ObtenerProductoEspecifico(producto){
             Swal.fire("Error al conectarse con el servidor");
         }
         if(response.status === 201){
+            console.log("201");
             const resultado = await response.text();
+            console.log(resultado);
             document.getElementsByClassName("grid-productos")[0].innerHTML = resultado;
             EscucharBtnAgregarCarrito();
         }
