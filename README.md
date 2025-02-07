@@ -25,17 +25,12 @@ Bootstrap
   ├── views/  
   ├── index.js  
 /frontend  
-  ├── html/  
+  ├── html/ index.hmtl    
   ├── styles/  
   ├── javascripts/  
-    ├── index.html  
-
     
-##⚙️ Instalación
-Clona el repositorio:
-git clone https:  
-//github.com/tu_usuario/tu_proyecto.git
-
+##⚙️ Instalación  
+Clona el repositorio
 
 ##Instala las dependencias del backend: 
 cd backend  
