@@ -55,12 +55,12 @@ async function ObtenerProductoEspecifico(producto){
         const response = await fetch(`https://rider-s-edge-back.onrender.com/productos/${producto}?indice=${indice}`);
         if(response.status === 500){
             Swal.fire("Error al conectarse con el servidor");
-        }
-        if(response.status === 201){
+        }else if(response.status === 201){
             const resultado = await response.text();
             document.getElementsByClassName("grid-productos")[0].innerHTML = resultado;
             EscucharBtnAgregarCarrito();
         }else if(response.status === 100){
+            console.log("100");
             Swal.fire("Lo siento, por el momento no hay stock de este tipo de producto");
         }
     }catch(error){
