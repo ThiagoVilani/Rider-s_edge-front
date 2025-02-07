@@ -57,11 +57,11 @@ async function ObtenerProductoEspecifico(producto){
             Swal.fire("Error al conectarse con el servidor");
         }
         if(response.status === 201){
-            console.log("201");
             const resultado = await response.text();
-            console.log(resultado);
             document.getElementsByClassName("grid-productos")[0].innerHTML = resultado;
             EscucharBtnAgregarCarrito();
+        }else if(response.status === 100){
+            Swal.fire("Lo siento, por el momento no hay stock de este tipo de producto");
         }
     }catch(error){
         console.error("Error al traer los datos:", error);
