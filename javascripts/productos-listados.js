@@ -13,14 +13,16 @@ ObtenerProductos();
 
 document.addEventListener("DOMContentLoaded",()=>{
     document.getElementsByClassName("btn-opcion-nav")[0].addEventListener("click",function(){
-        console.log("Boton cascos");
         localStorage.setItem("vista","cascos");
         ObtenerProductoEspecifico("cascos");
     });
     document.getElementsByClassName("btn-opcion-nav")[1].addEventListener("click",function(){
-        console.log("Boton camperas");
         localStorage.setItem("vista","camperas");
         ObtenerProductoEspecifico("camperas");
+    });
+    document.getElementsByClassName("btn-opcion-nav")[2].addEventListener("click",function(){
+        localStorage.setItem("vista","todos");
+        ObtenerProductos();
     });
     document.getElementById("pagina-anterior").addEventListener("click",async function(){
         CambiarPagina("anterior");
