@@ -1,6 +1,6 @@
 import Swal from "../node_modules/sweetalert2/dist/sweetalert2.esm.all.js";
 
-async function ObtenerProductos(fnEscucharBtn,fnSetIndice,direccion=0){
+export async function ObtenerProductos(fnEscucharBtn,fnSetIndice,direccion=0){
     try{
         const indice = localStorage.getItem("indice");
         const vista = localStorage.getItem("vista");
@@ -26,7 +26,7 @@ async function ObtenerProductos(fnEscucharBtn,fnSetIndice,direccion=0){
 }
 
 
-async function ObtenerProductoEspecifico(producto,fnEscucharBtn){
+export async function ObtenerProductoEspecifico(producto,fnEscucharBtn){
     try{
         const indice = localStorage.getItem("indice");
         const response = await fetch(`https://rider-s-edge-back.onrender.com/productos/${producto}?indice=${indice}`);
@@ -45,6 +45,3 @@ async function ObtenerProductoEspecifico(producto,fnEscucharBtn){
         throw error;
     }
 }
-
-module.exports.ObtenerProductos = ObtenerProductos;
-module.exports.ObtenerProductoEspecifico = ObtenerProductoEspecifico;

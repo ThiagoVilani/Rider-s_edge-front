@@ -1,5 +1,5 @@
 import Swal from "../node_modules/sweetalert2/dist/sweetalert2.esm.all.js";
-const Herramientas = require("./herramientas.js");
+import { ObtenerProductoEspecifico, ObtenerProductos } from "./herramientas.js";
 
 // Si todavia no ingreso su nombre lo redirige al inicio devuelta
 const nombre = localStorage.getItem("username");
@@ -10,16 +10,16 @@ if(nombre == undefined){
 localStorage.setItem("indice",0);
 localStorage.setItem("vista","todos");
 
-Herramientas.ObtenerProductos(EscucharBtnAgregarCarrito,SetIndice);
+ObtenerProductos(EscucharBtnAgregarCarrito,SetIndice);
 
 document.addEventListener("DOMContentLoaded",()=>{
     document.getElementsByClassName("btn-opcion-nav")[0].addEventListener("click",function(){
         localStorage.setItem("vista","cascos");
-        Herramientas.ObtenerProductoEspecifico("cascos",EscucharBtnAgregarCarrito);
+        ObtenerProductoEspecifico("cascos",EscucharBtnAgregarCarrito);
     });
     document.getElementsByClassName("btn-opcion-nav")[1].addEventListener("click",function(){
         localStorage.setItem("vista","camperas");
-        Herramientas.ObtenerProductoEspecifico("camperas",EscucharBtnAgregarCarrito);
+        ObtenerProductoEspecifico("camperas",EscucharBtnAgregarCarrito);
     });
     document.getElementsByClassName("btn-opcion-nav")[2].addEventListener("click",function(){
         localStorage.setItem("vista","todos");
