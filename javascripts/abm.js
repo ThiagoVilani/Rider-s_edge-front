@@ -130,7 +130,9 @@ async function EscucharBtnFormNuevo(event){
             };
             const resultadoProducto = await InsertarNuevoProducto(producto);
             if(resultadoProducto){
-                Swal.fire('Producto cargado exitosamente.');    
+                Swal.fire('Producto cargado exitosamente.').then((result)=>{
+                    LimpiarForm();
+                });  
             }else{
                 Swal.fire('Error', 'Error al cargar el producto.', 'error');
             }
@@ -183,8 +185,6 @@ async function InsertarFormModProducto(idProducto){
 
 async function EscuhcarBtnFormMod(event, id) {
     event.preventDefault();
-    // ActualizarProducto(event,id);
-
     try {
         await ActualizarProducto(event,id);
         await Swal.fire({
@@ -252,7 +252,9 @@ async function ActualizarProducto(event,id){
             };
             const resultadoProducto = await EnviarProductoActualizado(producto);
             if(resultadoProducto){
-                Swal.fire('Producto cargado exitosamente.');    
+                Swal.fire('Producto cargado exitosamente.').then((result)=>{
+                    LimpiarForm();
+                });    
             }else{
                 Swal.fire('Error', 'Error al cargar el producto.', 'error');
             }
@@ -288,6 +290,13 @@ async function LimpiarGridProductos(){
     }catch{
         return false;
     }
+}
+
+function LimpiarForm(){
+    document.getElementById("input-agregar-marca").value = "";
+    document.getElementById("input-agregar-modelo").value = "";
+    document.getElementById("input-agregar-precio").value = "";
+    document.getElementById("input-agregar-descripcion").value = "";
 }
 
 async function CrearGridProductos(){
