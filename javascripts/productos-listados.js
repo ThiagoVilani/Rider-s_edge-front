@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
     document.getElementsByClassName("btn-opcion-nav")[2].addEventListener("click",function(){
         localStorage.setItem("vista","todos");
-        ObtenerProductos();
+        ObtenerProductos(EscucharBtnAgregarCarrito,SetIndice);
     });
     document.getElementById("pagina-anterior").addEventListener("click",async function(){
         CambiarPagina("anterior");
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
 async function CambiarPagina(direccion){
-    await Herramientas.ObtenerProductos(direccion);
+    await ObtenerProductos(EscucharBtnAgregarCarrito,SetIndice,direccion);
 }
 
 async function SetIndice(direccion){
